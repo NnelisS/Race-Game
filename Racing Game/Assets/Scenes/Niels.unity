@@ -1584,10 +1584,6 @@ MonoBehaviour:
     rightWheel: {fileID: 552610364}
     motor: 1
     steering: 1
-  - leftWheel: {fileID: 872545852}
-    rightWheel: {fileID: 1833863301}
-    motor: 0
-    steering: 0
   maxMotorTorque: 1000
   maxSteeringAngle: 45
   acceleration: 500
@@ -3625,7 +3621,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7223556286328243778}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06976488, y: 0.015457855, z: 0.0363227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3736,7 +3732,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8265851498081151686}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06976488, y: 0.015457855, z: -0.0363227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

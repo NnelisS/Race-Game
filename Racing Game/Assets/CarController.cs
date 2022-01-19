@@ -82,6 +82,6 @@ public class CarController : MonoBehaviour
 
         //set wheel transform state
         trans.position = position;
-        trans.rotation = rotation;
+        trans.rotation = rotation *= Quaternion.Euler(0, 90, 0);
     }
 }
