@@ -1,15 +1,6 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
-[System.Serializable]
-public class AxleInfo
-{
-    public WheelCollider leftWheel;
-    public WheelCollider rightWheel;
-    public bool motor;
-    public bool steering;
-}
 
 public class CarController : MonoBehaviour
 {
@@ -25,6 +16,15 @@ public class CarController : MonoBehaviour
 
     private float currentAcceleratiom = 0f;
     private float currenBreakForce = 0f;
+
+    private float fall = -1f;
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = new Vector3(0, fall, 0);
+    }
 
     // finds the corresponding visual wheel
     // correctly applies the transform
@@ -49,8 +49,6 @@ public class CarController : MonoBehaviour
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-
-
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
@@ -85,3 +83,12 @@ public class CarController : MonoBehaviour
         trans.rotation = rotation *= Quaternion.Euler(0, 90, 0);
     }
 }
+
+[System.Serializable]
+public class AxleInfo
+{
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor;
+    public bool steering;
+}*/
