@@ -18,6 +18,11 @@ public class Wheel : MonoBehaviour
         wmesh = transform.Find("Wheel_Mesh");
     }
 
+    private void Update()
+    {
+        Debug.Log(wcol.brakeTorque);
+    }
+
     public void Steer(float steerInput)
     {
         turnAngle = steerInput * maxAngle + offset;
@@ -26,18 +31,27 @@ public class Wheel : MonoBehaviour
 
     public void Accelerate(float powerInput)
     {
-        if(powered) wcol.motorTorque = powerInput;
-        else wcol.brakeTorque = 0;
+        if (powered)
+        {
+            wcol.motorTorque = powerInput;
+        }
+        else
+        {
+            wcol.motorTorque = 0f;
+        }
     }
     
-    public void Brake()
+/*    public void Brake(float breakForce)
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            wcol.brakeTorque = 20000000;
-            wcol.motorTorque = 0;
+            wcol.brakeTorque = breakForce;
         }
-    }
+        else
+        {
+            wcol.brakeTorque = 0f;
+        }
+    }*/
 
     public void UpdatePosition()
     {

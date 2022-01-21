@@ -9,10 +9,14 @@ public class Formula : MonoBehaviour
     public float power = 15000f;
     public float torque = 500f;
     public float gravity = 9.81f;
-    public float breakForce = 25000f;
+    public float breakForce = 100000f;
+
+    private float fall = -0.2f;
 
     public bool autoOrient = false;
     public float autoOrientSpeed = 1f;
+
+    public Vector3 currentVelocity;
 
     private float horInput;
     private float verInput;
@@ -37,6 +41,8 @@ public class Formula : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.centerOfMass = new Vector3(0, fall, 0);
+
         ProcessForces();
         ProcessGravity();
     }
@@ -56,12 +62,17 @@ public class Formula : MonoBehaviour
         /*Vector3 rforce = new Vector3(0f, horInput* torque, 0f);
         rb.AddRelativeTorque(rforce);*/
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, Time.fixedDeltaTime * 1.5f);
+        }
+
         foreach (Wheel w in wheels)
         {
             w.Steer(horInput);
             w.Accelerate(verInput * power);
             w.UpdatePosition();
-            w.Brake();
+/*            w.Brake(breakForce);*/
         }
     }
 
