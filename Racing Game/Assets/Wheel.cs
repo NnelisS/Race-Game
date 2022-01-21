@@ -34,7 +34,8 @@ public class Wheel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            wcol.brakeTorque = 1;
+            wcol.brakeTorque = 20000000;
+            wcol.motorTorque = 0;
         }
     }
 
