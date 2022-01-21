@@ -27,6 +27,7 @@ public class Wheel : MonoBehaviour
     {
         turnAngle = steerInput * maxAngle + offset;
         wcol.steerAngle = turnAngle;
+        wcol.motorTorque = 1000;
     }
 
     public void Accelerate(float powerInput)
@@ -40,18 +41,6 @@ public class Wheel : MonoBehaviour
             wcol.motorTorque = 0f;
         }
     }
-    
-/*    public void Brake(float breakForce)
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            wcol.brakeTorque = breakForce;
-        }
-        else
-        {
-            wcol.brakeTorque = 0f;
-        }
-    }*/
 
     public void UpdatePosition()
     {
