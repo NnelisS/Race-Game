@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.83
+  m_AmbientIntensity: 0.7
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 821dc734072378f40a456eefcdfc8d8c, type: 2}
@@ -6804,7 +6804,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.758
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -30329,6 +30329,7 @@ GameObject:
   - component: {fileID: 1156652888}
   - component: {fileID: 1156652887}
   - component: {fileID: 1156652886}
+  - component: {fileID: 1156652889}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -30343,13 +30344,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156652884}
-  m_LocalRotation: {x: 0.02542964, y: 0.0028229356, z: -0.00036012568, w: 0.9996726}
-  m_LocalPosition: {x: 0.0089, y: 0.0324, z: -0.0088}
+  m_LocalRotation: {x: -0.003984175, y: 0.002832264, z: -0.00027693764, w: 0.999988}
+  m_LocalPosition: {x: 0.00889986, y: 0.029800002, z: -0.008900012}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1442473678}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 2.914, y: 0.323, z: -0.033}
+  m_LocalEulerAnglesHint: {x: -0.456, y: 0.325, z: -0.033}
 --- !u!114 &1156652886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30372,8 +30373,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -30433,6 +30434,41 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!328 &1156652889
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156652884}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 5ed95e6b65417e2438afb03f04f847fb, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 1156652888}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 01
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &1158449258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56164,7 +56200,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cbcfbeb31f221e54fb8cfcf383e089d0, type: 2}
+  - {fileID: 2100000, guid: 5850f4d965127d54792eadc43bc2c619, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
