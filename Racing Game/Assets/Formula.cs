@@ -11,6 +11,10 @@ public class Formula : MonoBehaviour
     public float gravity = 9.81f;
     public float breakForce = 100000f;
 
+    public GameObject cameraOne;
+    public GameObject cameraTwo;
+    public GameObject cameraThree;
+
     private float fall = -0.2f;
 
     public bool autoOrient = false;
@@ -22,6 +26,10 @@ public class Formula : MonoBehaviour
     private float verInput;
     private float brakeInput;
     private float steerAngle;
+
+    public bool camOne;
+    public bool camTwo;
+    public bool camThree;
 
     public Wheel[] wheels;
 
@@ -37,6 +45,66 @@ public class Formula : MonoBehaviour
         ProcessInput();
         Vector3 diff = transform.position - gravityTarget.position;
         if (autoOrient) { AutoOrient(-diff); }
+
+        CamChange();
+    }
+
+    public void CamChange()
+    {
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            if (camOne == true)
+            {
+
+                                cameraThree.SetActive(false);
+                                cameraTwo.SetActive(false);
+                                cameraOne.SetActive(true);
+                
+                camOne = false;
+                camTwo = true;
+                camThree = false;
+            }
+            else if (camTwo == true)
+            {
+                cameraThree.SetActive(false);
+                cameraTwo.SetActive(true);
+                cameraOne.SetActive(false);
+                camOne = false;
+                camTwo = false;
+                camThree = true;
+            }
+            else if (camThree == true)
+            {
+                cameraTwo.SetActive(false);
+                cameraThree.SetActive(true);
+                cameraOne.SetActive(false);
+                camOne = true;
+                camTwo = false;
+                camThree = false;
+            }
+            Debug.Log($" {camOne} {cameraTwo} {cameraThree}");
+        }
+
+        if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            cameraThree.SetActive(false);
+            cameraTwo.SetActive(false);
+            cameraOne.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            cameraOne.SetActive(false);
+            cameraThree.SetActive(false);
+            cameraTwo.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            cameraTwo.SetActive(false);
+            cameraThree.SetActive(true);
+            cameraOne.SetActive(false);
+        }
     }
 
     void FixedUpdate()
