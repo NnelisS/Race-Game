@@ -7,21 +7,17 @@ public class Wheel : MonoBehaviour
     public bool powered = false;
     public float maxAngle = 90f;
     public float offset = 0f;
+    public float rotationOffset = 90;
 
     private float turnAngle;
     private WheelCollider wcol;
-    private Transform wmeshL;
-    private Transform wmeshR;
-    private Transform wmeshBL;
-    private Transform wmeshBR;
+    private Transform wmesh;
+
 
     private void Start()
     {
         wcol = GetComponentInChildren<WheelCollider>();
-        wmeshL = transform.Find("Wheel_MeshL");
-        wmeshR = transform.Find("Wheel_MeshR");
-        wmeshBL = transform.Find("Wheel_MeshBL");
-        wmeshBR = transform.Find("Wheel_MeshBR");
+        wmesh = transform.Find("Wheel_Mesh");
     }
 
     private void Update()
@@ -54,13 +50,7 @@ public class Wheel : MonoBehaviour
         Quaternion rot = transform.rotation;
 
         wcol.GetWorldPose(out pos, out rot);
-        wmeshL.transform.position = pos;
-        wmeshR.transform.position = pos;
-        wmeshBL.transform.position = pos;
-        wmeshBR.transform.position = pos;
-        wmeshL.transform.rotation = rot *= Quaternion.Euler(0, 0, 0);
-        wmeshR.transform.rotation = rot *= Quaternion.Euler(0, 90, 0);
-        wmeshBL.transform.rotation = rot *= Quaternion.Euler(0, 180, 0);
-        wmeshBR.transform.rotation = rot *= Quaternion.Euler(0, 270, 0);
+        wmesh.transform.position = pos;
+        wmesh.transform.rotation = rot *= Quaternion.Euler(0, rotationOffset, 0);
     }
 }

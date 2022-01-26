@@ -1,39 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Formula : MonoBehaviour
 {
+    [Header("Car Info")]
     public Transform gravityTarget;
-
+    public Vector3 currentVelocity;
+    
     public float power = 15000f;
     public float torque = 500f;
     public float gravity = 9.81f;
     public float breakForce = 100000f;
 
+    [Header("UI")]
+    public TextMeshProUGUI speedLabel;
+    public float maxSpeed = 0.0f;
+    private float speed = 0.0f;
+
+    [Header("Car Cams")]
     public GameObject cameraOne;
     public GameObject cameraTwo;
     public GameObject cameraThree;
 
     private float fall = -0.2f;
 
+    [Header("Car Orientation")]
     public bool autoOrient = false;
     public float autoOrientSpeed = 1f;
-
-    public Vector3 currentVelocity;
 
     private float horInput;
     private float verInput;
     private float brakeInput;
     private float steerAngle;
 
-    public bool camOne;
-    public bool camTwo;
-    public bool camThree;
+    private bool camOne;
+    private bool camTwo;
+    private bool camThree;
 
+    [Header("Wheels")]
     public Wheel[] wheels;
 
-    Rigidbody rb;
+    private Rigidbody rb;
 
     void Start()
     {
@@ -42,6 +51,9 @@ public class Formula : MonoBehaviour
 
     void Update()
     {
+        speed = rb.velocity.magnitude * 3.6f;
+        speedLabel.text = ((int)speed + " km/h");
+
         ProcessInput();
         Vector3 diff = transform.position - gravityTarget.position;
         if (autoOrient) { AutoOrient(-diff); }
