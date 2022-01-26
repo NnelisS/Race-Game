@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &75103914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3178274324989396921, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-  m_PrefabInstance: {fileID: 7269951964352331744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140241384
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,11 +568,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &317617124 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3962367452053172855, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-  m_PrefabInstance: {fileID: 7269951964352331744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &347523265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2437,11 +2427,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800111152}
   m_Mesh: {fileID: -8254336822171360403, guid: 7e82c78167d693f42b0f4be231923ae7, type: 3}
---- !u!1 &1826402095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8290408387852806546, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-  m_PrefabInstance: {fileID: 7269951964352331744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833863299
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,22 +4341,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: F1 F2004 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2504817502071096067, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-      propertyPath: camOne
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504817502071096067, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-      propertyPath: cameraOne
-      value: 
-      objectReference: {fileID: 1826402095}
-    - target: {fileID: 2504817502071096067, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-      propertyPath: cameraTwo
-      value: 
-      objectReference: {fileID: 75103914}
-    - target: {fileID: 2504817502071096067, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
-      propertyPath: cameraThree
-      value: 
-      objectReference: {fileID: 317617124}
     - target: {fileID: 2665470173662204851, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0001

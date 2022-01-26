@@ -1474,9 +1474,15 @@ MonoBehaviour:
   torque: 500
   gravity: 135.08
   breakForce: 100000
+  cameraOne: {fileID: 8290408387852806546}
+  cameraTwo: {fileID: 3178274324989396921}
+  cameraThree: {fileID: 3962367452053172855}
   autoOrient: 1
   autoOrientSpeed: 1
   currentVelocity: {x: 0, y: 0, z: 0}
+  camOne: 1
+  camTwo: 0
+  camThree: 0
   wheels:
   - {fileID: 7269951964599703062}
   - {fileID: 7269951964293686758}
