@@ -6256,6 +6256,10 @@ MonoBehaviour:
   powered: 0
   maxAngle: 0
   offset: 0
+  frontLeft: 0
+  frontRight: 0
+  backLeft: 0
+  backRight: 1
 --- !u!1 &7269951964141390615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6303,6 +6307,10 @@ MonoBehaviour:
   powered: 0
   maxAngle: 0
   offset: 0
+  frontLeft: 0
+  frontRight: 0
+  backLeft: 1
+  backRight: 0
 --- !u!1 &7269951964293686756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6350,6 +6358,10 @@ MonoBehaviour:
   powered: 1
   maxAngle: 45
   offset: 0
+  frontLeft: 1
+  frontRight: 0
+  backLeft: 0
+  backRight: 0
 --- !u!1 &7269951964529342202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6479,6 +6491,10 @@ MonoBehaviour:
   powered: 1
   maxAngle: 45
   offset: 0
+  frontLeft: 0
+  frontRight: 1
+  backLeft: 0
+  backRight: 0
 --- !u!1 &7269951964706955749
 GameObject:
   m_ObjectHideFlags: 0
