@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4832106245356734873
 Transform:
@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rail (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1400056889420053375, guid: 1133e798323f5eb4a8a2fd362d042812, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1133e798323f5eb4a8a2fd362d042812, type: 3}
 --- !u!4 &5263656888818284175 stripped
@@ -156,6 +160,10 @@ PrefabInstance:
     - target: {fileID: 1400056889420053375, guid: 1133e798323f5eb4a8a2fd362d042812, type: 3}
       propertyPath: m_Name
       value: Rail (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400056889420053375, guid: 1133e798323f5eb4a8a2fd362d042812, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1133e798323f5eb4a8a2fd362d042812, type: 3}
