@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6614442348423806042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901247524140766604}
+  m_Layer: 0
+  m_Name: Tribune normal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901247524140766604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614442348423806042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -525.6719, y: 7.530169, z: 349.05756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4776185862722696245}
+  - {fileID: 295458886252731692}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &101170407867030485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 901247524140766604}
+    m_Modifications:
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.94812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.192537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 288.15247
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.049048916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9987964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 174.377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216530539197396314, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+      propertyPath: m_Name
+      value: Tribune roof
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+--- !u!4 &4776185862722696245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4841095063207817184, guid: 8e077920f39f5d941849cce6f4c745cd, type: 3}
+  m_PrefabInstance: {fileID: 101170407867030485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8935896468480969068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 901247524140766604}
+    m_Modifications:
+    - target: {fileID: 3633672613727132683, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_Name
+      value: Tribune1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.038147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.644402
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.0475464
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9989895
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.044943616
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -5.152
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+--- !u!4 &295458886252731692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8654511335644222528, guid: 4a4e6186d7dfb5a4396d3f8794962ec0, type: 3}
+  m_PrefabInstance: {fileID: 8935896468480969068}
+  m_PrefabAsset: {fileID: 0}
