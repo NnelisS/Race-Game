@@ -1483,7 +1483,7 @@ MonoBehaviour:
   cameraThree: {fileID: 3962367452053172855}
   autoOrient: 1
   autoOrientSpeed: 1
-  camOne: 0
+  camOne: 1
   camTwo: 0
   camThree: 0
   wheels:
@@ -1515,6 +1515,11 @@ MonoBehaviour:
   timerTwoActivate: 0
   timerThreeActivate: 0
   calculateTotaleTime: 0
+  finish: {fileID: 0}
+  speedoMeter: {fileID: 0}
+  panel: {fileID: 0}
+  laps: {fileID: 0}
+  finishCam: {fileID: 0}
 --- !u!1 &2603399570510647350
 GameObject:
   m_ObjectHideFlags: 0
