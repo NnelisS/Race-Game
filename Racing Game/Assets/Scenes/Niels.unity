@@ -2657,6 +2657,11 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1 &1681873867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414530028004325594, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
+  m_PrefabInstance: {fileID: 7269951964352331744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732255831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,6 +4078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityTarget: {fileID: 543450653159922834}
   currentVelocity: {x: 0, y: 0, z: 0}
+  steeringWheel: {fileID: 0}
   power: 10000
   torque: 500
   gravity: 135.08
@@ -5287,6 +5293,10 @@ PrefabInstance:
       propertyPath: speedLabel
       value: 
       objectReference: {fileID: 759058374}
+    - target: {fileID: 2504817502071096067, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
+      propertyPath: steeringWheel
+      value: 
+      objectReference: {fileID: 1681873867}
     - target: {fileID: 2665470173662204851, guid: efab30dc1e4527c4ca417c954582b58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -2.818

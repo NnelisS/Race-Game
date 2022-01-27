@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class GameManagement : MonoBehaviour
     {
         menuChange.Play("MenuChangeBack");
         StartCoroutine(ButtonPress(buttonBack, buttonCar));
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 
     public IEnumerator ButtonPress(GameObject button, GameObject otherButton)

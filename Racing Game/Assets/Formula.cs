@@ -8,6 +8,7 @@ public class Formula : MonoBehaviour
     [Header("Car Info")]
     public Transform gravityTarget;
     public Vector3 currentVelocity;
+    public GameObject steeringWheel;
     
     public float power = 15000f;
     public float torque = 500f;
@@ -51,6 +52,7 @@ public class Formula : MonoBehaviour
 
     void Update()
     {
+/*        SteeringWheel();*/
         Cursor.visible = false;
 
         speed = rb.velocity.magnitude * 3.0f;
@@ -127,6 +129,17 @@ public class Formula : MonoBehaviour
         ProcessForces();
         ProcessGravity();
     }
+
+/*    public void SteeringWheel()
+    {
+        //steeringWheel.transform.rotation = Quaternion.Euler(steeringWheel.transform.rotation.x * Time.deltaTime, 0, 0);
+        if (Input.GetKey(KeyCode.A))
+        {
+            Quaternion a = Quaternion.Euler(steeringWheel.transform.rotation.x, -90, 0);
+            Quaternion b = Quaternion.Euler(45, -90, 0);
+            steeringWheel.transform.rotation = Quaternion.Slerp(a, b, 1);
+        }
+    }*/
 
     void ProcessInput()
     {
