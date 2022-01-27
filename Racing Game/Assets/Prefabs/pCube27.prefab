@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2282180704674357115}
   - component: {fileID: 6835972942307159217}
   - component: {fileID: 5117695662748879215}
+  - component: {fileID: 2653972713144107196}
   m_Layer: 0
   m_Name: pCube27
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2653972713144107196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443271106176962356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1.7513862, z: 1.000001}
+  m_Center: {x: 0.000000029802322, y: 0.37569356, z: 0.00000047683716}
