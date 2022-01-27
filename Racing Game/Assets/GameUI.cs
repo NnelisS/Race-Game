@@ -71,6 +71,8 @@ public class GameUI : MonoBehaviour
         {
             totalTimer = timerLapOne + timerLapTwo + timerLapThree;
             totalTime.text = string.Format("Total Time: " + TimeString(totalTimer, totalTime));
+
+            PlayerPrefs.SetFloat("RaceTime", totalTimer);
         }
     }
 

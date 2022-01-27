@@ -4079,6 +4079,9 @@ MonoBehaviour:
   cameraThree: {fileID: 0}
   autoOrient: 1
   autoOrientSpeed: 1
+  camOne: 0
+  camTwo: 0
+  camThree: 0
   wheels:
   - {fileID: 773907993}
   - {fileID: 192764927}
