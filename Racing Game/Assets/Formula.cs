@@ -12,7 +12,7 @@ public class Formula : MonoBehaviour
     public float power = 15000f;
     public float torque = 500f;
     public float gravity = 9.81f;
-    public float breakForce = 100000f;
+    public float breakForce = 80000f;
 
     [Header("UI")]
     public TextMeshProUGUI speedLabel;
@@ -35,9 +35,9 @@ public class Formula : MonoBehaviour
     private float brakeInput;
     private float steerAngle;
 
-    private bool camOne;
-    private bool camTwo;
-    private bool camThree;
+    public bool camOne;
+    public bool camTwo;
+    public bool camThree;
 
     [Header("Wheels")]
     public Wheel[] wheels;
@@ -51,7 +51,7 @@ public class Formula : MonoBehaviour
 
     void Update()
     {
-        speed = rb.velocity.magnitude * 3.6f;
+        speed = rb.velocity.magnitude * 3.0f;
         speedLabel.text = ((int)speed + " km/h");
 
         ProcessInput();
@@ -67,10 +67,9 @@ public class Formula : MonoBehaviour
         {
             if (camOne == true)
             {
-
-                                cameraThree.SetActive(false);
-                                cameraTwo.SetActive(false);
-                                cameraOne.SetActive(true);
+                cameraThree.SetActive(false);
+                cameraTwo.SetActive(false);
+                cameraOne.SetActive(true);
                 
                 camOne = false;
                 camTwo = true;
