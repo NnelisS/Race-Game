@@ -6,6 +6,7 @@ using TMPro;
 public class MapPick : MonoBehaviour
 {
     public TextMeshProUGUI timeOne;
+    public float giveme;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class MapPick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeOne.text = string.Format("Time 1: {0}", PlayerPrefs.GetFloat("RaceTime"));
+        giveme = PlayerPrefs.GetFloat("RaceTime");
+        timeOne.text = string.Format("Time 1: {0}", giveme);
     }
 }

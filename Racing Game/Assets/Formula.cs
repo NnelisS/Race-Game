@@ -51,6 +51,8 @@ public class Formula : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
+
         speed = rb.velocity.magnitude * 3.0f;
         speedLabel.text = ((int)speed + " km/h");
 
