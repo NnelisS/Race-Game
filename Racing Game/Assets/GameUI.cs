@@ -21,35 +21,37 @@ public class GameUI : MonoBehaviour
     public bool timerThreeActivate = false;
     public bool calculateTotaleTime = false;
 
-    private float time;
-    private float mSec;
-    private float sec;
-    private float min;
+    private BoxCollider boxCol;
+    public GameObject finish;
+    public GameObject speedoMeter;
+
+    public Animator panel;
+
+    public GameObject finishCam;
+
+    private float timerForScale = 0.5f;
+    private bool activateIt = false;
+
+    private void Start()
+    {
+        boxCol = GetComponent<BoxCollider>();
+    }
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Z))
+        Debug.Log(timerForScale);
+
+        if (activateIt)
         {
-            if (timerOneActivate == false && timerTwoActivate == false && timerThreeActivate == false)
+            timerForScale -= Time.deltaTime;
+            if (timerForScale <= 0)
             {
-                timerOneActivate = true;
-            }
-            else if (timerOneActivate)
-            {
-                timerOneActivate = false;
-                timerTwoActivate = true;
-            }
-            else if (timerTwoActivate)
-            {
-                timerTwoActivate = false;
-                timerThreeActivate = true;
-            }
-            else if (timerThreeActivate)
-            {
-                timerThreeActivate = false;
-                calculateTotaleTime = true;
+
+                Time.timeScale = 1;
+                Time.fixedDeltaTime = Time.timeScale * 1f;
             }
         }
+
 
         if (timerOneActivate)
         {
@@ -82,5 +84,51 @@ public class GameUI : MonoBehaviour
         float sec = (int)(lapTime % 60);
         float min = (int)(lapTime / 60 % 60);
         return laptimer.text = string.Format("{0:00}:{1:00}:{2:00}", min, sec, mSec);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("FirstLap"))
+        {
+            if (timerOneActivate == false && timerTwoActivate == false && timerThreeActivate == false)
+            {
+                lapOne.gameObject.SetActive(true);
+                timerOneActivate = true;
+                other.gameObject.SetActive(false);
+            }
+        }
+        if (other.gameObject.CompareTag("NewLap"))
+        {
+            if (timerOneActivate)
+            {
+                lapTwo.gameObject.SetActive(true);
+                boxCol.enabled = false;
+                timerOneActivate = false;
+                timerTwoActivate = true;
+            }
+            else if (timerTwoActivate)
+            {
+                lapThree.gameObject.SetActive(true);
+                timerTwoActivate = false;
+                timerThreeActivate = true;
+                this.boxCol.enabled = false;
+                finish.gameObject.SetActive(true);
+            }
+            else if (timerThreeActivate)
+            {
+                totalTime.enabled = true;
+                timerThreeActivate = false;
+                calculateTotaleTime = true;
+            }
+        }
+        if (other.gameObject.CompareTag("finish"))
+        {
+            speedoMeter.SetActive(false);
+            panel.Play("PanelActivate");
+            activateIt = true;
+            finishCam.gameObject.SetActive(true);
+            Time.timeScale = 0.05f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        }
     }
 }

@@ -1385,9 +1385,10 @@ GameObject:
   - component: {fileID: 2504817502071096066}
   - component: {fileID: 2504817502071096065}
   - component: {fileID: 2504817502071096067}
+  - component: {fileID: 569876485389624883}
   m_Layer: 0
   m_Name: F1 F2004 (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1482,11 +1483,38 @@ MonoBehaviour:
   cameraThree: {fileID: 3962367452053172855}
   autoOrient: 1
   autoOrientSpeed: 1
+  camOne: 0
+  camTwo: 0
+  camThree: 0
   wheels:
   - {fileID: 7269951964599703062}
   - {fileID: 7269951964293686758}
   - {fileID: 7269951963857090355}
   - {fileID: 7269951964141390617}
+--- !u!114 &569876485389624883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504817502071096064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06687baccddd148b0fe4b829e8fcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lapOne: {fileID: 0}
+  lapTwo: {fileID: 0}
+  lapThree: {fileID: 0}
+  totalTime: {fileID: 0}
+  timerLapOne: 0
+  timerLapTwo: 0
+  timerLapThree: 0
+  totalTimer: 0
+  timerOneActivate: 0
+  timerTwoActivate: 0
+  timerThreeActivate: 0
+  calculateTotaleTime: 0
 --- !u!1 &2603399570510647350
 GameObject:
   m_ObjectHideFlags: 0
