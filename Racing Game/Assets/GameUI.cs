@@ -24,6 +24,7 @@ public class GameUI : MonoBehaviour
     private BoxCollider boxCol;
     public GameObject finish;
     public GameObject speedoMeter;
+    public GameObject speedOmeter;
 
     public Animator panel;
     public Animator laps;
@@ -131,6 +132,7 @@ public class GameUI : MonoBehaviour
             calculateTotaleTime = true;
             timerThreeActivate = false;
             speedoMeter.SetActive(false);
+            speedOmeter.SetActive(false);
             panel.Play("Panel");
             laps.Play("Laps");
             activateIt = true;
