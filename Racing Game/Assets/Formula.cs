@@ -9,6 +9,9 @@ public class Formula : MonoBehaviour
     public Transform gravityTarget;
     public Vector3 currentVelocity;
     public GameObject steeringWheel;
+    public Transform speedOmeter;
+    public GameObject throttle;
+    public GameObject brakee;
     
     public float power = 15000f;
     public float torque = 500f;
@@ -47,12 +50,32 @@ public class Formula : MonoBehaviour
 
     void Start()
     {
+        throttle.SetActive(false);
+        brakee.SetActive(false);
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-/*        SteeringWheel();*/
+        if (Input.GetKey(KeyCode.W))
+        {
+            throttle.SetActive(true);
+        }
+        else
+        {
+            throttle.SetActive(false);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            brakee.SetActive(true);
+        }
+        else
+        {
+            brakee.SetActive(false);
+        }
+
+        SteeringWheel();
         Cursor.visible = false;
 
         speed = rb.velocity.magnitude * 3.0f;
@@ -61,6 +84,8 @@ public class Formula : MonoBehaviour
         ProcessInput();
         Vector3 diff = transform.position - gravityTarget.position;
         if (autoOrient) { AutoOrient(-diff); }
+
+        speedOmeter.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(180, -90, speed / 300));
 
         CamChange();
     }
@@ -130,16 +155,42 @@ public class Formula : MonoBehaviour
         ProcessGravity();
     }
 
-/*    public void SteeringWheel()
+    public void SteeringWheel()
     {
         //steeringWheel.transform.rotation = Quaternion.Euler(steeringWheel.transform.rotation.x * Time.deltaTime, 0, 0);
         if (Input.GetKey(KeyCode.A))
         {
-            Quaternion a = Quaternion.Euler(steeringWheel.transform.rotation.x, -90, 0);
+            Quaternion a = Quaternion.Euler(steeringWheel.transform.localRotation.x, -90, 0);
             Quaternion b = Quaternion.Euler(45, -90, 0);
-            steeringWheel.transform.rotation = Quaternion.Slerp(a, b, 1);
+            steeringWheel.transform.localRotation = Quaternion.Lerp(a, b, 10);
         }
-    }*/
+        else if (Input.GetKey(KeyCode.D))
+        {
+            Quaternion a = Quaternion.Euler(steeringWheel.transform.localRotation.x, -90, 0);
+            Quaternion b = Quaternion.Euler(-45, -90, 0);
+            steeringWheel.transform.localRotation = Quaternion.Lerp(a, b, 10);
+        }
+        else
+        {
+            Quaternion a = Quaternion.Euler(steeringWheel.transform.localRotation.x, -90, 0);
+            Quaternion b = Quaternion.Euler(0, -90, 0);
+            steeringWheel.transform.localRotation = Quaternion.Lerp(a, b, 10);
+        }
+    
+
+/*        if (Input.GetKey(KeyCode.D))
+        {
+            Quaternion c = Quaternion.Euler(steeringWheel.transform.localRotation.x, -90, 0);
+            Quaternion d = Quaternion.Euler(-45, -90, 0);
+            steeringWheel.transform.localRotation = Quaternion.Lerp(c, d, 10);
+        }
+        else
+        {
+            Quaternion c = Quaternion.Euler(steeringWheel.transform.localRotation.x, -90, 0);
+            Quaternion d = Quaternion.Euler(-45, -90, 0);
+            steeringWheel.transform.localRotation = Quaternion.Lerp(d, c, 10);
+        }*/
+    }
 
     void ProcessInput()
     {
