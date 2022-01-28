@@ -37,7 +37,7 @@ public class GameManagement : MonoBehaviour
                 {
                     menuChange.Play("MenuChangeBack");
                     StartCoroutine(ButtonPress(buttonBack, buttonBack));
-                    StartCoroutine(ButtonPress(buttonBack, buttonTrackSelect));
+                    StartCoroutine(ButtonPress(buttonToCar, buttonTrackSelect));
                     StartCoroutine(ButtonPress(buttonBack, buttonShowRoom));
                     StartCoroutine(ButtonPress(buttonBack, buttonCredits));
                     trackSelect = false;
@@ -47,7 +47,7 @@ public class GameManagement : MonoBehaviour
                 {
                     menuChange.Play("TrackToCarBack");
                     StartCoroutine(ButtonPress(buttonBack, buttonBack));
-                    StartCoroutine(ButtonPress(buttonPlayGame, buttonTrackSelect));
+                    StartCoroutine(ButtonPress(buttonPlayGame, buttonToCar));
                     carSelect = false;
                     trackSelect = true;
                 }
@@ -138,7 +138,7 @@ public class GameManagement : MonoBehaviour
             {
                 menuChange.Play("MenuChangeBack");
                 StartCoroutine(ButtonPress(buttonBack, buttonBack));
-                StartCoroutine(ButtonPress(buttonBack, buttonTrackSelect));
+                StartCoroutine(ButtonPress(buttonToCar, buttonTrackSelect));
                 StartCoroutine(ButtonPress(buttonBack, buttonShowRoom));
                 StartCoroutine(ButtonPress(buttonBack, buttonCredits));
                 trackSelect = false;
@@ -148,7 +148,7 @@ public class GameManagement : MonoBehaviour
             {
                 menuChange.Play("TrackToCarBack");
                 StartCoroutine(ButtonPress(buttonBack, buttonBack));
-                StartCoroutine(ButtonPress(buttonPlayGame, buttonTrackSelect));
+                StartCoroutine(ButtonPress(buttonPlayGame, buttonToCar));
                 carSelect = false;
                 trackSelect = true;
             }
