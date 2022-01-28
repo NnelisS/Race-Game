@@ -59,28 +59,28 @@ public class GameUI : MonoBehaviour
 
             timerLapOne += Time.deltaTime;
 
-            lapOne.text = string.Format("Lap 1: " + TimeString(timerLapOne, lapOne));
+            lapOne.text = string.Format("" + TimeString(timerLapOne, lapOne));
         }
         else if (timerTwoActivate)
         {
             lapTwo.gameObject.SetActive(true);
 
             timerLapTwo += Time.deltaTime;
-            lapTwo.text = string.Format("Lap 2: " + TimeString(timerLapTwo, lapTwo));
+            lapTwo.text = string.Format("" + TimeString(timerLapTwo, lapTwo));
         }
         else if (timerThreeActivate)
         {
             lapThree.gameObject.SetActive(true);
 
             timerLapThree += Time.deltaTime;
-            lapThree.text = string.Format("Lap 3: " + TimeString(timerLapThree, lapThree));
+            lapThree.text = string.Format("" + TimeString(timerLapThree, lapThree));
         }
         else if (calculateTotaleTime)
         {
             totalTime.gameObject.SetActive(true);
 
             totalTimer = timerLapOne + timerLapTwo + timerLapThree;
-            totalTime.text = string.Format("Total Time: " + TimeString(totalTimer, totalTime));
+            totalTime.text = string.Format("" + TimeString(totalTimer, totalTime));
 
             PlayerPrefs.SetFloat("RaceTime", totalTimer);
         }

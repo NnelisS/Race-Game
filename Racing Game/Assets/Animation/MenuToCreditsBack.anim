@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MenuChangeBack
+  m_Name: MenuToCreditsBack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -16.74862, y: -1.122286, z: 0}
+        value: {x: -7.491619, y: -1.5402863, z: -5}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2.5
-        value: {x: -16.74862, y: -1.122286, z: -214.8484}
+        value: {x: -7.491619, y: -1.540286, z: -181.8}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -39,33 +39,15 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Car selection
+    path: Credits
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -19.43862, y: -0.1102864, z: 210.94632}
+        value: {x: -19.43862, y: -0.1102864, z: 191.54}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 1
-        value: {x: -19.43862, y: -0.1102864, z: 187.995}
-        inSlope: {x: 0, y: 0, z: -61.20353}
-        outSlope: {x: 0, y: 0, z: -61.20353}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 1.5
-        value: {x: -19.43862, y: -0.1102864, z: 12.47415}
-        inSlope: {x: 0, y: 0, z: -35.98441}
-        outSlope: {x: 0, y: 0, z: -35.98441}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -94,7 +76,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 628845339
+      path: 2393565410
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -134,7 +116,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -16.74862
+        value: -7.491619
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -143,7 +125,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.5
-        value: -16.74862
+        value: -7.491619
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -154,7 +136,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Car selection
+    path: Credits
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -162,7 +144,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.122286
+        value: -1.5402863
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -171,7 +153,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.5
-        value: -1.122286
+        value: -1.540286
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -182,7 +164,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Car selection
+    path: Credits
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -190,7 +172,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -199,7 +181,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.5
-        value: -214.8484
+        value: -181.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -210,7 +192,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Car selection
+    path: Credits
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -274,27 +256,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 210.94632
+        value: 191.54
         inSlope: 0
         outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 187.995
-        inSlope: -61.20353
-        outSlope: -61.20353
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
-        value: 12.47415
-        inSlope: -35.98441
-        outSlope: -35.98441
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
