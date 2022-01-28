@@ -13,7 +13,7 @@ public class Formula : MonoBehaviour
     public float power = 15000f;
     public float torque = 500f;
     public float gravity = 9.81f;
-    public float breakForce = 80000f;
+    public float breakForce = 1f;
 
     [Header("UI")]
     public TextMeshProUGUI speedLabel;
@@ -158,7 +158,7 @@ public class Formula : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, Time.fixedDeltaTime * 1.5f);
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, Time.fixedDeltaTime * 1.0f);
         }
 
         foreach (Wheel w in wheels)
